@@ -1,0 +1,89 @@
+/*
+ *      The SCSS Flex Grid
+ *
+ * This compact flexible grid will empower you with an easy implemented system
+ * allowing you to create and maintain layouts for webdesign in a snap.
+ *      
+ * Author:          Nicolaj Nyvang
+ * URL:             https://github.com/nyvang
+ * 
+ * Plugin URL:      https://github.com/nyvang/sass-flex-grid
+ * License:         See LICENSE.txt or GPL-3.0 at http://www.gnu.org/licenses/
+*/
+.gw_1 {
+  max-width: 6.25%;
+  padding: 0.6px 0; }
+
+.gw_2 {
+  max-width: 14.58333%;
+  padding: 0.6px 0; }
+
+.gw_3 {
+  max-width: 22.91667%;
+  padding: 0.6px 0; }
+
+.gw_4 {
+  max-width: 31.25%;
+  padding: 0.6px 0; }
+
+.gw_5 {
+  max-width: 39.58333%;
+  padding: 0.6px 0; }
+
+.gw_6 {
+  max-width: 47.91667%;
+  padding: 0.6px 0; }
+
+.gw_7 {
+  max-width: 56.25%;
+  padding: 0.6px 0; }
+
+.gw_8 {
+  max-width: 64.58333%;
+  padding: 0.6px 0; }
+
+.gw_9 {
+  max-width: 72.91667%;
+  padding: 0.6px 0; }
+
+.gw_10 {
+  max-width: 81.25%;
+  padding: 0.6px 0; }
+
+.gw_11 {
+  max-width: 89.58333%;
+  padding: 0.6px 0; }
+
+.gw_12 {
+  max-width: 97.91667%;
+  padding: 0.6px 0; }
+
+body.flex-grid {
+  display: -webkit-flex !important;
+  display: -moz-flex !important;
+  display: -ms-flex !important;
+  display: flex !important;
+  -webkit-flex-wrap: wrap !important;
+  -moz-flex-wrap: wrap !important;
+  -ms-flex-wrap: wrap !important;
+  flex-wrap: wrap !important; }
+
+.flex-row {
+  display: -webkit-inline-flex !important;
+  display: -moz-inline-flex !important;
+  display: -ms-inline-flex !important;
+  display: inline-flex !important;
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden; }
+
+.flex-col {
+  -webkit-flex: auto !important;
+  -moz-flex: auto !important;
+  -ms-flex: auto !important;
+  flex: auto !important;
+  border: 1px solid gray;
+  border-radius: 1px;
+  margin: 2px 10px;
+  overflow: hidden;
+  text-align: center; }

@@ -1,0 +1,16 @@
+// The CSS3 Flexbox system //
+// For the original specifications, see: http://www.w3.org/TR/css3-flexbox/
+// Arguments for flex-box mixins is available in comments above the mixin.
+
+// initial, <integer>, auto, or none //
+@mixin flex( $c: auto ) { -webkit-flex: $c !important; -moz-flex: $c !important; -ms-flex: $c !important; flex: $c !important; }
+// flex or inline-flex //
+@mixin flex-display( $display: inline-flex ) { display: -webkit-#{$display} !important; display: -moz-#{$display} !important; display: -ms-#{$display} !important; display: $display !important; }
+// row, row-reverse, column, column-reverse //
+@mixin flex-direction( $d: row ) { -webkit-flex-direction: $d !important; -moz-flex-direction: $d !important; -ms-flex-direction: $d !important; flex-direction: $d !important; }
+// nowrap, wrap, wrap-reverse //
+@mixin flex-wrap( $w: wrap ) { -webkit-flex-wrap: $w !important; -moz-flex-wrap: $w !important; -ms-flex-wrap: $w !important; flex-wrap: $w !important; }
+// center, flex-start, flex-end, space-between, space-around //
+@mixin justify-content( $jc: flex-start ) { -webkit-justify-content: $jc !important; -moz-justify-content: $jc !important; -ms-justify-content: $jc !important; justify-content: $jc !important; }
+// center, flex-start, flex-end, space-between, space-around, stretch //
+@mixin align-content( $a: space-around ) { -webkit-align-content: $a !important; -moz-align-content: $a !important; -ms-align-content: $a !important; align-content: $a !important; }
