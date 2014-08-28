@@ -1,25 +1,27 @@
+// Grid "engine" library
+// Note! Must be imported after the _flexbox library
 
-
-// In order to see grid borders. If no need in prod, remove it
-@mixin test-border() {
-    border: 1px solid gray;
-    border-radius: 1px;
-}
+// Implementing the no-breakpoints principle
+body { font-size: 1em; }
 
 // Variables
 $grid-size: 12;
-$column-width: 60px;
-$gutter-width: 20px;
-$page-width: 960px;
+$column-width: 60;
+$gutter-width: 20;
+$page-width: 960;
+
+$column-width-em: $column-width / 16 * 1em;
+$gutter-width-em: $gutter-width / 16 * 1em;
+$page-width-em: $page-width / 16 * 1em;
 
 // The Grid Loop - what makes it all tick-tack //
-$i: 1;
-@while $i <= $grid-size {
-    .gw_#{ $i } {
-        max-width: ( ( $i * $column-width ) + ( $i * $gutter-width ) - $gutter-width ) / $page-width * 100% ;
-	padding: $column-width / 100 0;
+@while $grid-size > 0 {
+    .gwd_#{ $grid-size } {
+	width: $grid-size * ($column-width-em + $gutter-width-em) -  ($gutter-width-em);
+	padding: $column-width-em / 100 0;
+	background-color: lighten(#aaa, $grid-size % 400 * 2.29554%);
     }
-    $i: $i + 1 !global;
+    $grid-size: $grid-size - 1 !global;
 }
 
 // Main container for the grid.
@@ -31,7 +33,8 @@ body.flex-grid{
 // Rows are placed inside the grid.
 .flex-row {
     @include flex-display(inline-flex);
-    width: $page-width;
+    width: $page-width-em;
+    max-width: 100%;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -39,10 +42,8 @@ body.flex-grid{
 // Columns are placed in the rows
 .flex-col {
     @include flex();
-    @include test-border();
-    margin: 2px ( $gutter-width / 2 );
+    margin: 2px ( $gutter-width-em / 2 );
     overflow: hidden;
     text-align: center;
-    
 }
 
